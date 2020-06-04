@@ -29,7 +29,7 @@ if (type) {
 					var file = app.openForAccess(Path(filename), { writePermission: true });
 					app.setEof(file, { to: 0 });
 					var content = type === "HTML" ? notes[i].body() : 
-					notes[i].body().replace(/(<div>|<\/div>|<br>|<u>|<\/u>|<ul>|<\/ul>|<ol>|<\/ol>|<li>|<\/li>)/g,'');
+					notes[i].body().replace(/(<div>|<\/div>|<br>|<u>|<\/u>|<ul>|<\/ul>|<ol>|<\/ol>|<li>|<\/li>|<h1>|<\/h1>|<h2>|<\/h2>|<ul class="Apple-dash-list">|<tt>|<\/tt>)/g,'');
 					//not working?
 			        notes[i].body().replace(/<li>/g,"bullet")
 					
